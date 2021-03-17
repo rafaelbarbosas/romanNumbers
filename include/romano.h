@@ -6,4 +6,6 @@
 #include <iostream>
 #include <cassert>
 
+int roman_to_decimal(char const *roman_number);
+
 #endif  // INCLUDE_ROMANO_H_

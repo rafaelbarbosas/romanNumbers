@@ -8,5 +8,5 @@
 using std::cout;
 
 TEST_CASE("Testing catch framework", "[catch]") {
-    REQUIRE(1 == 1);
+    REQUIRE(roman_to_decimal("I") == 1);
 }
