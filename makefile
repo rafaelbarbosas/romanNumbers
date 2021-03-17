@@ -30,7 +30,7 @@ testes: $(OBJ)
          --track-origins=yes \
          --verbose \
          --log-file=valgrind-out.txt \
-         ./romano
+         ./testes
 
 .PHONY: clean
 
