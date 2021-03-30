@@ -30,5 +30,21 @@ int roman_to_decimal(std::string roman_number) {
     if (!is_valid(roman_number) )
         return -1;
 
-    return get_basic_value(roman_number[0]);
+    int result = 0;
+    for (int i = 0; i < roman_number.length(); i++) {
+        int current_value = get_basic_value(roman_number[i]);
+        if ( i < roman_number.length() - 1 ) {  // if has next value
+            int next_value = get_basic_value(roman_number[i + 1]);
+            if (current_value >= next_value) {
+                result += current_value;
+            } else {
+                result += next_value - current_value;
+                i++;
+            }
+        } else {
+            result += current_value;
+        }
+    }
+
+    return result;
 }
