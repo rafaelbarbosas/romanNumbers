@@ -45,3 +45,15 @@ TEST_CASE("Testing valid numbers - edges", "[valid-edges]") {
     REQUIRE(roman_to_decimal("CD") == 400);
     REQUIRE(roman_to_decimal("CM") == 900);
 }
+
+TEST_CASE("Testing valid max numbers", "[valid-max]") {
+    REQUIRE(roman_to_decimal("MMCMXCIX") == 2999);
+    REQUIRE(roman_to_decimal("MMCMXCVIII") == 2998);
+    REQUIRE(roman_to_decimal("MMCMXCVII") == 2997);
+    REQUIRE(roman_to_decimal("MMM") == 3000);
+}
+
+TEST_CASE("Testing invalid max numbers", "[invalid-max]") {
+    REQUIRE(roman_to_decimal("MMMI") == -1);
+    REQUIRE(roman_to_decimal("MMMII") == -2);
+}
