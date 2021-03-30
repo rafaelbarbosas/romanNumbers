@@ -1,3 +1,5 @@
 Testa se a função reconhece os numeros basicos: I,V,X,L,C,D,M
 
 Testa numeros invalidos, como XM ou IIII
+
+Testa numeros validos de 1 a 10 e numeros que poderiam dar errado, da borda do problema

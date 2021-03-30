@@ -23,3 +23,25 @@ TEST_CASE("Testing invalid numbers", "[ivalid]") {
     REQUIRE(roman_to_decimal("LM") == -1);
     REQUIRE(roman_to_decimal("IM") == -1);
 }
+
+TEST_CASE("Testing valid numbers - 1 to 10", "[valid-1-10]") {
+    REQUIRE(roman_to_decimal("I") == 1);
+    REQUIRE(roman_to_decimal("II") == 2);
+    REQUIRE(roman_to_decimal("II") == 2);
+    REQUIRE(roman_to_decimal("IV") == 4);
+    REQUIRE(roman_to_decimal("V") == 2);
+    REQUIRE(roman_to_decimal("VI") == 2);
+    REQUIRE(roman_to_decimal("VII") == 2);
+    REQUIRE(roman_to_decimal("VIII") == 2);
+    REQUIRE(roman_to_decimal("IX") == 2);
+    REQUIRE(roman_to_decimal("X") == 10);
+}
+
+TEST_CASE("Testing valid numbers - edges", "[valid-edges]") {
+    REQUIRE(roman_to_decimal("IV") == 1);
+    REQUIRE(roman_to_decimal("IX") == 9);
+    REQUIRE(roman_to_decimal("XL") == 40);
+    REQUIRE(roman_to_decimal("XC") == 90);
+    REQUIRE(roman_to_decimal("CD") == 400);
+    REQUIRE(roman_to_decimal("CM") == 900);
+}
