@@ -55,5 +55,5 @@ TEST_CASE("Testing valid max numbers", "[valid-max]") {
 
 TEST_CASE("Testing invalid max numbers", "[invalid-max]") {
     REQUIRE(roman_to_decimal("MMMI") == -1);
-    REQUIRE(roman_to_decimal("MMMII") == -2);
+    REQUIRE(roman_to_decimal("MMMII") == -1);
 }

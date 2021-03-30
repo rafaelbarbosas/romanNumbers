@@ -46,5 +46,8 @@ int roman_to_decimal(std::string roman_number) {
         }
     }
 
+    if ( result > 3000)
+        return -1;
+
     return result;
 }
