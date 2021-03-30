@@ -21,6 +21,14 @@ int get_basic_value(char const roman_char) {
     return -1;
 }
 
-int roman_to_decimal(char const *roman_number) {
+bool is_valid(std::string roman_number) {
+    return std::regex_match(roman_number, std::regex(
+        "M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$"));
+}
+
+int roman_to_decimal(std::string roman_number) {
+    if (!is_valid(roman_number) )
+        return -1;
+
     return get_basic_value(roman_number[0]);
 }

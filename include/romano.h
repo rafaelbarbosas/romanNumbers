@@ -5,7 +5,9 @@
 
 #include <iostream>
 #include <cassert>
+#include <regex>
+#include <string>
 
-int roman_to_decimal(char const *roman_number);
+int roman_to_decimal(std::string roman_number);
 
 #endif  // INCLUDE_ROMANO_H_

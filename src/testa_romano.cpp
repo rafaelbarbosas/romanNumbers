@@ -5,8 +5,6 @@
 
 #include "../include/romano.h"
 
-using std::cout;
-
 TEST_CASE("Testing basic numbers", "[basic]") {
     REQUIRE(roman_to_decimal("I") == 1);
     REQUIRE(roman_to_decimal("V") == 5);

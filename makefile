@@ -19,11 +19,11 @@ OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 
 $(OBJ): $(ODIR)/%.o: $(SRCDIR)/%.cpp $(DEPS)
-	$(CC) -c -o $@ $< $(CFLAGS)
+	$(CC) -std=c++0x -c -o $@ $< $(CFLAGS)
 
 testes: $(OBJ)
-	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
-	cppcheck --enable=warning ../
+	$(CC) -std=c++0x -o $@ $^ $(CFLAGS) $(LIBS)
+	cppcheck --enable=warning src/romano.cpp src/testa_romano.cpp include/romano.h
 	cpplint src/romano.cpp src/testa_romano.cpp include/romano.h
 	valgrind --leak-check=full \
          --show-leak-kinds=all \
